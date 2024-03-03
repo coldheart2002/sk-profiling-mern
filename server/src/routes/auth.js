@@ -1,5 +1,6 @@
 import express from "express";
 import bcrypt from "bcrypt";
+import jwt from "jsonwebtoken";
 import { User } from "../model/Users.js";
 
 const router = express.Router();
@@ -30,7 +31,7 @@ router.post("/signup", async (req, res) => {
   }
 });
 
-router.post("/signin", async (req, res) => {
+router.post("/login", async (req, res) => {
   const { username, password } = req.body;
 
   try {
@@ -46,7 +47,9 @@ router.post("/signin", async (req, res) => {
       return res.json({ message: "password doesn't match" });
     }
 
-    res.json({ message: "login success", user });
+    const token = jwt.sign({ id: user._id }, "secret");
+
+    res.json({ token, userId: user._id, message: "logged in successfully" });
   } catch (err) {
     console.log(err);
     res.json(err);

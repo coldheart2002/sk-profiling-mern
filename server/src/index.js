@@ -7,18 +7,17 @@ import { port, dbURI } from "./private.js";
 
 const app = express();
 
-async function startServer() {
-  try {
-    await mongoose.connect(dbURI);
+mongoose
+  .connect(dbURI)
+  .then(() => {
     console.log("connected to database...");
-    await app.listen(port);
-    console.log(`server started at localhost:${port}...`);
-  } catch (err) {
+    app.listen(port, () => {
+      console.log(`server started at localhost:${port}...`);
+    });
+  })
+  .catch((err) => {
     console.log(err);
-  }
-}
-
-startServer();
+  });
 
 app.use(cors());
 app.use(express.json());
