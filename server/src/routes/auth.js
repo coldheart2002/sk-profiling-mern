@@ -3,7 +3,7 @@ import bcrypt from "bcrypt";
 import { User } from "../model/Users.js";
 
 const router = express.Router();
-const saltRounds = 10; // You can adjust this value
+const saltRounds = 10;
 
 router.post("/signup", async (req, res) => {
   const { username, password } = req.body;
@@ -12,22 +12,21 @@ router.post("/signup", async (req, res) => {
     const result = await User.findOne({ username });
 
     if (result) {
-      return res.json({ message: "user already exist" });
+      return res.json({ message: "username already exist" });
     }
 
-    // Hash the password before saving the user
     const hashedPassword = await bcrypt.hash(password, saltRounds);
 
     const user = new User({
       username,
-      password: hashedPassword, // Save the hashed password
-      // Include other fields if there are any
+      password: hashedPassword,
     });
 
     await user.save();
     res.json({ message: "user saved" });
   } catch (err) {
-    res.send(err);
+    console.log(err);
+    res.json(err);
   }
 });
 
@@ -49,6 +48,7 @@ router.post("/signin", async (req, res) => {
 
     res.json({ message: "login success", user });
   } catch (err) {
+    console.log(err);
     res.json(err);
   }
 });
