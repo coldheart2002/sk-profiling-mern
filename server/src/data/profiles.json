@@ -1,0 +1,534 @@
+[{
+  "_id": {
+    "$oid": "65d9f4a8b3dd2456012ddb9d"
+  },
+  "purok": "maunongon",
+  "fName": "kyla marie",
+  "mName": "s",
+  "lName": "sombilon",
+  "age": "21",
+  "birthDate": "2002-10-26T00:00:00.000+00:00",
+  "civilStatus": "s",
+  "workStatus": "student",
+  "contactNumber": "09608657484",
+  "sex": "f",
+  "educationalAttainment": "college",
+  "isRegisteredVoter": "national election"
+},
+{
+  "_id": {
+    "$oid": "65d9f4a8b3dd2456012ddb9e"
+  },
+  "purok": "maunongon",
+  "fName": "carmel mae",
+  "mName": "s",
+  "lName": "sombilon",
+  "age": "19",
+  "birthDate": "2004-07-11T00:00:00.000+00:00",
+  "civilStatus": "s",
+  "workStatus": "student",
+  "contactNumber": "09603610097",
+  "sex": "f",
+  "educationalAttainment": "college",
+  "isRegisteredVoter": "not registered"
+},
+{
+  "_id": {
+    "$oid": "65d9f4a8b3dd2456012ddb9f"
+  },
+  "purok": "maunongon",
+  "fName": "carlito",
+  "mName": "s",
+  "lName": "sombilon",
+  "age": "17",
+  "birthDate": "2006-03-05T00:00:00.000+00:00",
+  "civilStatus": "s",
+  "workStatus": "student",
+  "contactNumber": "09917594134",
+  "sex": "m",
+  "educationalAttainment": "senior high school",
+  "isRegisteredVoter": "sk election"
+},
+{
+  "_id": {
+    "$oid": "65d9f4a8b3dd2456012ddba0"
+  },
+  "purok": "maunongon",
+  "fName": "christopher",
+  "mName": "",
+  "lName": "talledo",
+  "age": "14",
+  "birthDate": "2004-03-30T00:00:00.000+00:00",
+  "civilStatus": "s",
+  "workStatus": "student",
+  "contactNumber": "",
+  "sex": "m",
+  "educationalAttainment": "junior high school",
+  "isRegisteredVoter": "not registered"
+},
+{
+  "_id": {
+    "$oid": "65d9f4a8b3dd2456012ddba1"
+  },
+  "purok": "matinahuron",
+  "fName": "mary andrhia",
+  "mName": "",
+  "lName": "famat",
+  "age": "19",
+  "birthDate": "2005-01-06T00:00:00.000+00:00",
+  "civilStatus": "s",
+  "workStatus": "student",
+  "contactNumber": "09708196258",
+  "sex": "f",
+  "educationalAttainment": "senior high school",
+  "isRegisteredVoter": "national election"
+},
+{
+  "_id": {
+    "$oid": "65d9f4a8b3dd2456012ddba2"
+  },
+  "purok": "matinahuron",
+  "fName": "rica mae",
+  "mName": "",
+  "lName": "bejec",
+  "age": "18",
+  "birthDate": "2005-08-14T00:00:00.000+00:00",
+  "civilStatus": "s",
+  "workStatus": "student",
+  "contactNumber": "09077866246",
+  "sex": "f",
+  "educationalAttainment": "college",
+  "isRegisteredVoter": "national election"
+},
+{
+  "_id": {
+    "$oid": "65d9f4a8b3dd2456012ddba3"
+  },
+  "purok": "madasigon",
+  "fName": "venega",
+  "mName": "",
+  "lName": "abergas",
+  "age": "19",
+  "birthDate": "2007-07-26T00:00:00.000+00:00",
+  "civilStatus": "s",
+  "workStatus": "student",
+  "contactNumber": "09096509294",
+  "sex": "f",
+  "educationalAttainment": "senior high school",
+  "isRegisteredVoter": "not registered"
+},
+{
+  "_id": {
+    "$oid": "65d9f4a8b3dd2456012ddba4"
+  },
+  "purok": "madasigon",
+  "fName": "apple jane",
+  "mName": "",
+  "lName": "razonable",
+  "age": "15",
+  "birthDate": "2008-01-10T00:00:00.000+00:00",
+  "civilStatus": "s",
+  "workStatus": "student",
+  "contactNumber": "09198766565",
+  "sex": "f",
+  "educationalAttainment": "junior high school",
+  "isRegisteredVoter": "not registered"
+},
+{
+  "_id": {
+    "$oid": "65d9f4a8b3dd2456012ddba5"
+  },
+  "purok": "madasigon",
+  "fName": "arvin jade",
+  "mName": "",
+  "lName": "razonable",
+  "age": "18",
+  "birthDate": "2006-01-26T00:00:00.000+00:00",
+  "civilStatus": "s",
+  "workStatus": "student",
+  "contactNumber": "",
+  "sex": "m",
+  "educationalAttainment": "senior high school",
+  "isRegisteredVoter": "not registered"
+},
+{
+  "_id": {
+    "$oid": "65d9f4a8b3dd2456012ddba6"
+  },
+  "purok": "madasigon",
+  "fName": "rain michael",
+  "mName": "",
+  "lName": "caminse",
+  "age": "18",
+  "birthDate": "2005-02-11T00:00:00.000+00:00",
+  "civilStatus": "s",
+  "workStatus": "student",
+  "contactNumber": "",
+  "sex": "m",
+  "educationalAttainment": "senior high school",
+  "isRegisteredVoter": "not registered"
+},
+{
+  "_id": {
+    "$oid": "65d9f4a8b3dd2456012ddba7"
+  },
+  "purok": "matinabangon",
+  "fName": "joan",
+  "mName": "s",
+  "lName": "aperdo",
+  "age": "15",
+  "birthDate": "2008-07-29T00:00:00.000+00:00",
+  "civilStatus": "s",
+  "workStatus": "student",
+  "contactNumber": "09707758645",
+  "sex": "f",
+  "educationalAttainment": "junior high school",
+  "isRegisteredVoter": "sk election"
+},
+{
+  "_id": {
+    "$oid": "65d9f4a8b3dd2456012ddba8"
+  },
+  "purok": "matinabangon",
+  "fName": "ana marie",
+  "mName": "m",
+  "lName": "aguinod",
+  "age": "16",
+  "birthDate": "2007-11-06T00:00:00.000+00:00",
+  "civilStatus": "s",
+  "workStatus": "student",
+  "contactNumber": "09100331447",
+  "sex": "f",
+  "educationalAttainment": "junior high school",
+  "isRegisteredVoter": "sk election"
+},
+{
+  "_id": {
+    "$oid": "65d9f4a8b3dd2456012ddba9"
+  },
+  "purok": "matinabangon",
+  "fName": "dante",
+  "mName": "",
+  "lName": "mamac",
+  "age": "19",
+  "birthDate": "2004-09-02T00:00:00.000+00:00",
+  "civilStatus": "s",
+  "workStatus": "student",
+  "contactNumber": "09707758501",
+  "sex": "m",
+  "educationalAttainment": "senior high school",
+  "isRegisteredVoter": "sk election"
+},
+{
+  "_id": {
+    "$oid": "65d9f4a8b3dd2456012ddbaa"
+  },
+  "purok": "matinabangon",
+  "fName": "cristine mae",
+  "mName": "",
+  "lName": "mamac",
+  "age": "22",
+  "birthDate": "2001-08-30T00:00:00.000+00:00",
+  "civilStatus": "s",
+  "workStatus": "student",
+  "contactNumber": "09387625425",
+  "sex": "f",
+  "educationalAttainment": "college",
+  "isRegisteredVoter": "national election"
+},
+{
+  "_id": {
+    "$oid": "65d9f4a8b3dd2456012ddbab"
+  },
+  "purok": "matinabangon",
+  "fName": "jhondel",
+  "mName": "m",
+  "lName": "alburo",
+  "age": "15",
+  "birthDate": "2008-11-28T00:00:00.000+00:00",
+  "civilStatus": "s",
+  "workStatus": "student",
+  "contactNumber": "09093558880",
+  "sex": "m",
+  "educationalAttainment": "junior high school",
+  "isRegisteredVoter": "sk election"
+},
+{
+  "_id": {
+    "$oid": "65d9f4a8b3dd2456012ddbac"
+  },
+  "purok": "mahigugmaon",
+  "fName": "mary zaivie",
+  "mName": "z",
+  "lName": "comaling",
+  "age": "16",
+  "birthDate": "2007-07-31T00:00:00.000+00:00",
+  "civilStatus": "s",
+  "workStatus": "student",
+  "contactNumber": "09621820771",
+  "sex": "f",
+  "educationalAttainment": "senior high school",
+  "isRegisteredVoter": "sk election"
+},
+{
+  "_id": {
+    "$oid": "65d9f4a8b3dd2456012ddbad"
+  },
+  "purok": "mahigugmaon",
+  "fName": "stevie jade",
+  "mName": "",
+  "lName": "cedeño",
+  "age": "17",
+  "birthDate": "2007-02-23T00:00:00.000+00:00",
+  "civilStatus": "s",
+  "workStatus": "student",
+  "contactNumber": "09509729532",
+  "sex": "f",
+  "educationalAttainment": "junior high school",
+  "isRegisteredVoter": "sk election"
+},
+{
+  "_id": {
+    "$oid": "65d9f4a8b3dd2456012ddbae"
+  },
+  "purok": "mahigugmaon",
+  "fName": "jesslyne marie",
+  "mName": "c",
+  "lName": "dorio",
+  "age": "23",
+  "birthDate": "2000-09-20T00:00:00.000+00:00",
+  "civilStatus": "s",
+  "workStatus": "",
+  "contactNumber": "09700947919",
+  "sex": "f",
+  "educationalAttainment": "college",
+  "isRegisteredVoter": "national election"
+},
+{
+  "_id": {
+    "$oid": "65d9f4a8b3dd2456012ddbaf"
+  },
+  "purok": "mahigugmaon",
+  "fName": "daniel john",
+  "mName": "",
+  "lName": "zamora",
+  "age": "15",
+  "birthDate": "2008-11-08T00:00:00.000+00:00",
+  "civilStatus": "s",
+  "workStatus": "",
+  "contactNumber": "09637555182",
+  "sex": "m",
+  "educationalAttainment": "junior high school",
+  "isRegisteredVoter": "not registered"
+},
+{
+  "_id": {
+    "$oid": "65d9f4a8b3dd2456012ddbb0"
+  },
+  "purok": "mahigugmaon",
+  "fName": "via",
+  "mName": "",
+  "lName": "llena",
+  "age": "22",
+  "birthDate": "2001-03-12T00:00:00.000+00:00",
+  "civilStatus": "s",
+  "workStatus": "student",
+  "contactNumber": "09638733796",
+  "sex": "f",
+  "educationalAttainment": "college",
+  "isRegisteredVoter": "national election"
+},
+{
+  "_id": {
+    "$oid": "65d9f4a8b3dd2456012ddbb1"
+  },
+  "purok": "manggihatagon",
+  "fName": "jonamae",
+  "mName": "",
+  "lName": "aquino",
+  "age": "21",
+  "birthDate": "2002-07-03T00:00:00.000+00:00",
+  "civilStatus": "s",
+  "workStatus": "student",
+  "contactNumber": "09333851138",
+  "sex": "f",
+  "educationalAttainment": "college",
+  "isRegisteredVoter": "national election"
+},
+{
+  "_id": {
+    "$oid": "65d9f4a8b3dd2456012ddbb2"
+  },
+  "purok": "manggihatagon",
+  "fName": "jasmine claire",
+  "mName": "",
+  "lName": "aspacio",
+  "age": "17",
+  "birthDate": "2007-01-08T00:00:00.000+00:00",
+  "civilStatus": "s",
+  "workStatus": "student",
+  "contactNumber": "",
+  "sex": "f",
+  "educationalAttainment": "senior high school",
+  "isRegisteredVoter": "sk election"
+},
+{
+  "_id": {
+    "$oid": "65d9f4a8b3dd2456012ddbb3"
+  },
+  "purok": "manggihatagon",
+  "fName": "john vincent",
+  "mName": "",
+  "lName": "patajo",
+  "age": "17",
+  "birthDate": "2006-12-24T00:00:00.000+00:00",
+  "civilStatus": "s",
+  "workStatus": "student",
+  "contactNumber": "",
+  "sex": "m",
+  "educationalAttainment": "senior high school",
+  "isRegisteredVoter": "not registered"
+},
+{
+  "_id": {
+    "$oid": "65d9f4a8b3dd2456012ddbb4"
+  },
+  "purok": "manggihatagon",
+  "fName": "philip john",
+  "mName": "m",
+  "lName": "barioga",
+  "age": "22",
+  "birthDate": "2002-01-17T00:00:00.000+00:00",
+  "civilStatus": "s",
+  "workStatus": "student",
+  "contactNumber": "",
+  "sex": "m",
+  "educationalAttainment": "college",
+  "isRegisteredVoter": "national election"
+},
+{
+  "_id": {
+    "$oid": "65d9f4a8b3dd2456012ddbb5"
+  },
+  "purok": "manggihatagon",
+  "fName": "paul brian",
+  "mName": "",
+  "lName": "regaldo",
+  "age": "17",
+  "birthDate": "2006-10-31T00:00:00.000+00:00",
+  "civilStatus": "s",
+  "workStatus": "student",
+  "contactNumber": "",
+  "sex": "m",
+  "educationalAttainment": "college",
+  "isRegisteredVoter": "not registered"
+},
+{
+  "_id": {
+    "$oid": "65d9f4a8b3dd2456012ddbb6"
+  },
+  "purok": "manggihatagon",
+  "fName": "reichen clarence",
+  "mName": "",
+  "lName": "sombilon",
+  "age": "17",
+  "birthDate": "2006-06-06T00:00:00.000+00:00",
+  "civilStatus": "s",
+  "workStatus": "student",
+  "contactNumber": "",
+  "sex": "m",
+  "educationalAttainment": "senior high school",
+  "isRegisteredVoter": "not registered"
+},
+{
+  "_id": {
+    "$oid": "65d9f4a8b3dd2456012ddbb7"
+  },
+  "purok": "manggihatagon",
+  "fName": "jessa mae",
+  "mName": "l",
+  "lName": "sardido",
+  "age": "21",
+  "birthDate": "2002-12-12T00:00:00.000+00:00",
+  "civilStatus": "s",
+  "workStatus": "student",
+  "contactNumber": "09096509261",
+  "sex": "f",
+  "educationalAttainment": "college",
+  "isRegisteredVoter": "national election"
+},
+{
+  "_id": {
+    "$oid": "65d9f4a8b3dd2456012ddbb8"
+  },
+  "purok": "manggihatagon",
+  "fName": "joeniel",
+  "mName": "t",
+  "lName": "tangpos",
+  "age": "18",
+  "birthDate": "2005-03-04T00:00:00.000+00:00",
+  "civilStatus": "s",
+  "workStatus": "student",
+  "contactNumber": "09096509261",
+  "sex": "m",
+  "educationalAttainment": "senior high school",
+  "isRegisteredVoter": "national election"
+},
+{
+  "_id": {
+    "$oid": "65d9f4a8b3dd2456012ddbb9"
+  },
+  "purok": "manggihatagon",
+  "fName": "mel vincent",
+  "mName": "j",
+  "lName": "tampipi",
+  "age": "15",
+  "birthDate": "2007-12-29T00:00:00.000+00:00",
+  "civilStatus": "s",
+  "workStatus": "student",
+  "contactNumber": "09700947307",
+  "sex": "m",
+  "educationalAttainment": "junior high school",
+  "isRegisteredVoter": "not registered"
+},
+{
+  "_id": {
+    "$oid": "65d9f4a8b3dd2456012ddbba"
+  },
+  "purok": "manggihatagon",
+  "fName": "niño mharlito",
+  "mName": "j",
+  "lName": "tampipi",
+  "age": "22",
+  "birthDate": "2002-01-26T00:00:00.000+00:00",
+  "civilStatus": "s",
+  "workStatus": "student",
+  "contactNumber": "09684332989",
+  "sex": "m",
+  "educationalAttainment": "college",
+  "isRegisteredVoter": "national election"
+},
+{
+  "_id": {
+    "$oid": "65e2830226c3a577ba6a57f3"
+  },
+  "fName": "r",
+  "mName": "wer",
+  "lName": "wr",
+  "age": "2",
+  "birthDate": {
+    "$date": "2024-03-06T00:00:00.000Z"
+  },
+  "civilStatus": "W",
+  "contactNumber": "324",
+  "sex": "O",
+  "educationalAttainment": "Bachelor's Degree",
+  "isRegisteredVoter": "National Election",
+  "createdAt": {
+    "$date": "2024-03-02T01:38:10.373Z"
+  },
+  "updatedAt": {
+    "$date": "2024-03-02T01:38:10.373Z"
+  },
+  "__v": 0
+}]

@@ -7,10 +7,10 @@ const Display = ({ data, fn }) => {
 
   return (
     <>
-      <div className="container">
-        <div className="table table-striped">
+      <div className="container border text-center">
+        <div className="table table-striped text-center">
           <thead>
-            <tr className="table-primary">
+            <tr className="table-primary fs-5 ">
               <th scope="col">Action</th>
               <th scope="col">Name</th>
               <th scope="col">Age</th>
@@ -22,7 +22,6 @@ const Display = ({ data, fn }) => {
               <th scope="col">Voter</th>
             </tr>
           </thead>
-
           <tbody>
             {data.map((profile) => {
               const middleInitial =
