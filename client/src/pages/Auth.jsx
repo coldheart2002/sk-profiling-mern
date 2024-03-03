@@ -1,34 +1,35 @@
 import { useState } from "react";
 import Auth_Form from "../components/Auth_Form";
 import axios from "axios";
+import { dbPort } from "../private.js";
 
 const Auth = () => {
   const [signupVisibility, setSignupVisibility] = useState(true);
   const [loginVisibility, setLoginVisibility] = useState(false);
-  const [btnText, setBtnText] = useState("Login here");
+  const [btnText, setBtnText] = useState("Login Here");
 
   return (
     <div className="container-fluid">
-      <div className="row justify-content-md-center mb-3">
+      <div className="row justify-content-md-center ">
         <div className="col-4">
           {signupVisibility && <Signup />}
           {loginVisibility && <Login />}
         </div>
       </div>
-      <div className="row justify-content-md-center">
+      <div className="row justify-content-md-center mt-3 ">
         <div className="col-1">
           <button
             type="button"
-            className="btn btn-primary"
+            className="btn btn-outline-primary"
             onClick={() => {
               if (signupVisibility) {
                 setSignupVisibility(false);
                 setLoginVisibility(true);
-                setBtnText("signup here");
+                setBtnText("Signup Here");
               } else {
                 setSignupVisibility(true);
                 setLoginVisibility(false);
-                setBtnText("login here");
+                setBtnText("Login Here");
               }
             }}
           >
@@ -48,7 +49,7 @@ const Signup = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     axios
-      .post("http://localhost:3000/auth/signup", { username, password })
+      .post(`http://localhost:${dbPort}/auth/signup`, { username, password })
       .then((res) => setLabel(res.data.message));
   };
   return (
@@ -73,8 +74,11 @@ const Login = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     axios
-      .post("http://localhost:3000/auth/login", { username, password })
-      .then((res) => setLabel(res.data.message));
+      .post(`http://localhost:${dbPort}/auth/login`, { username, password })
+      .then((res) => {
+        setLabel(res.data.message);
+        window.localStorage.setItem("token", res.data.token);
+      });
   };
   return (
     <>

@@ -4,7 +4,7 @@ const Auth_Form = ({ labels, formDetails, stateFunc, handleSubmit }) => {
   return (
     <div className="Login">
       <form className="p-4" onSubmit={handleSubmit}>
-        <div className="text-label">{labels.label}</div>
+        <div className="text-label text-capitalize">{labels.label}</div>
         <h2 className="text-center">{formDetails.label}</h2>
         <div className="mb-3">
           <label htmlFor="username" className="form-label">
@@ -34,7 +34,7 @@ const Auth_Form = ({ labels, formDetails, stateFunc, handleSubmit }) => {
             id="password"
           />
         </div>
-        <button type="submit" className="btn btn-primary">
+        <button type="submit" className="btn btn-outline-primary">
           {formDetails.label}
         </button>
       </form>
