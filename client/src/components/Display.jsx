@@ -3,14 +3,14 @@ import { PropTypes } from "prop-types";
 const Profiles = ({ profiles }) => {
   const colStyle = "fw-medium text-capitalize";
   return (
-    <div className="container border text-center">
+    <div className="container-fluid ">
       <label
         htmlFor="dataLength"
-        className="text-capitalize"
+        className="text-capitalize mb-3"
       >{`${profiles.length} data available`}</label>
       <table className="table table-striped text-center">
         <thead>
-          <tr className="table-primary fs-5 ">
+          <tr className="table-primary fs-5">
             <th scope="col">Action</th>
             <th scope="col">Name</th>
             <th scope="col">Age</th>
