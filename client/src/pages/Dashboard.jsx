@@ -2,21 +2,15 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import PieChartTemplate from "../components/charts/PieChartTemplate";
 import { dbPort } from "../private";
+import { useFetchProfiles } from "../useFetchProfiles";
 
 const Dashboard = () => {
+  const link = `http://localhost:${dbPort}/profiles/chartData`;
+  const { chartData } = useFetchProfiles(link);
+
   const rowStyle = "row ";
   const colStyle =
     "p-5 m-1 rounded border border-primary col d-flex justify-content-center";
-  const [chartData, setChartData] = useState([]);
-
-  useEffect(() => {
-    axios
-      .get(`http://localhost:${dbPort}/profiles/chartData`)
-      .then((result) => {
-        setChartData(result.data);
-      })
-      .catch((err) => console.log(err));
-  });
 
   return (
     <div className="container-fluid">
@@ -25,7 +19,7 @@ const Dashboard = () => {
           <PieChartTemplate
             title="Civil Status"
             labels={["Single", "Married"]}
-            data={chartData.civilStatus}
+            data={chartData.civilStatusData}
             backgroundColor={["blue", "pink"]}
           />
         </div>

@@ -3,7 +3,8 @@ import { dbPort } from "../private.js";
 import { useFetchProfiles } from "../useFetchProfiles.js";
 
 const Profiles = () => {
-  const { loading, message, profiles } = useFetchProfiles(dbPort);
+  const link = `http://localhost:${dbPort}/profiles`;
+  const { loading, message, profiles } = useFetchProfiles(link);
 
   return (
     <div className="container-fluid">
