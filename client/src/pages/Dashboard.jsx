@@ -1,54 +1,22 @@
+import { useEffect, useState } from "react";
+import axios from "axios";
 import PieChartTemplate from "../components/charts/PieChartTemplate";
 import { dbPort } from "../private";
-import { useFetchProfiles } from "../useFetchProfiles";
 
 const Dashboard = () => {
   const rowStyle = "row ";
   const colStyle =
     "p-5 m-1 rounded border border-primary col d-flex justify-content-center";
-  const { profiles } = useFetchProfiles(dbPort);
+  const [chartData, setChartData] = useState([]);
 
-  //civi status data
-  const singleCount = filterDataLength(profiles, "civilStatus", "s");
-  const marriedCount = filterDataLength(profiles, "civilStatus", "m");
-
-  //sex data
-  const maleCount = filterDataLength(profiles, "sex", "m");
-  const femaleCount = filterDataLength(profiles, "sex", "f");
-
-  //educational attainment data
-  const jhsCount = filterDataLength(
-    profiles,
-    "educationalAttainment",
-    "junior high school"
-  );
-  const shsCount = filterDataLength(
-    profiles,
-    "educationalAttainment",
-    "senior high school"
-  );
-  const collegeCount = filterDataLength(
-    profiles,
-    "educationalAttainment",
-    "college"
-  );
-
-  //voters data
-  const notVoters = filterDataLength(
-    profiles,
-    "isRegisteredVoter",
-    "not registered"
-  );
-  const skVoters = filterDataLength(
-    profiles,
-    "isRegisteredVoter",
-    "sk election"
-  );
-  const nationalVoters = filterDataLength(
-    profiles,
-    "isRegisteredVoter",
-    "national election"
-  );
+  useEffect(() => {
+    axios
+      .get(`http://localhost:${dbPort}/profiles/chartData`)
+      .then((result) => {
+        setChartData(result.data);
+      })
+      .catch((err) => console.log(err));
+  });
 
   return (
     <div className="container-fluid">
@@ -57,7 +25,7 @@ const Dashboard = () => {
           <PieChartTemplate
             title="Civil Status"
             labels={["Single", "Married"]}
-            data={[singleCount, marriedCount]}
+            data={chartData.civilStatus}
             backgroundColor={["blue", "pink"]}
           />
         </div>
@@ -65,7 +33,7 @@ const Dashboard = () => {
           <PieChartTemplate
             title="Sex"
             labels={["Male", "Female"]}
-            data={[maleCount, femaleCount]}
+            data={chartData.sexData}
             backgroundColor={["blue", "pink"]}
           />
         </div>
@@ -75,7 +43,7 @@ const Dashboard = () => {
           <PieChartTemplate
             title="Educational Attainment"
             labels={["Junior High School", "Senior High School", "College"]}
-            data={[jhsCount, shsCount, collegeCount]}
+            data={chartData.educationData}
             backgroundColor={["blue", "pink", "red"]}
           />
         </div>
@@ -83,17 +51,13 @@ const Dashboard = () => {
           <PieChartTemplate
             title="Voters"
             labels={["Not Voters", "SK Elections", "National Elections"]}
-            data={[notVoters, skVoters, nationalVoters]}
+            data={chartData.votersData}
             backgroundColor={["blue", "pink", "red"]}
           />
         </div>
       </div>
     </div>
   );
-};
-
-const filterDataLength = (profiles, key, value) => {
-  return profiles.filter((profile) => profile[key] == value).length;
 };
 
 export default Dashboard;

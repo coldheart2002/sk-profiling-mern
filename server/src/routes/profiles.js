@@ -14,6 +14,60 @@ router.get("/", (req, res) => {
     .catch((err) => res.json(err));
 });
 
+router.get("/chartData", (req, res) => {
+  const filterDataLength = (profiles, key, value) => {
+    return profiles.filter((profile) => profile[key] == value).length;
+  };
+
+  Profile.find()
+    .then((profiles) => {
+      const singleCount = filterDataLength(profiles, "civilStatus", "s");
+      const marriedCount = filterDataLength(profiles, "civilStatus", "m");
+      const civilStatusData = [singleCount, marriedCount];
+
+      const maleCount = filterDataLength(profiles, "sex", "m");
+      const femaleCount = filterDataLength(profiles, "sex", "f");
+      const sexData = [maleCount, femaleCount];
+
+      const jhsCount = filterDataLength(
+        profiles,
+        "educationalAttainment",
+        "junior high school"
+      );
+      const shsCount = filterDataLength(
+        profiles,
+        "educationalAttainment",
+        "senior high school"
+      );
+      const collegeCount = filterDataLength(
+        profiles,
+        "educationalAttainment",
+        "college"
+      );
+      const educationData = [jhsCount, shsCount, collegeCount];
+
+      const notVoters = filterDataLength(
+        profiles,
+        "isRegisteredVoter",
+        "not registered"
+      );
+      const skVoters = filterDataLength(
+        profiles,
+        "isRegisteredVoter",
+        "sk election"
+      );
+      const nationalVoters = filterDataLength(
+        profiles,
+        "isRegisteredVoter",
+        "national election"
+      );
+      const votersData = [notVoters, skVoters, nationalVoters];
+
+      res.json({ civilStatusData, sexData, educationData, votersData });
+    })
+    .catch((err) => res.json(err));
+});
+
 router.post("/create", (req, res) => {
   const profile = new Profile(req.body);
 
