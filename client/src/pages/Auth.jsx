@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Auth_Form from "../components/Auth_Form";
+import AuthForm from "../components/AuthForm.jsx";
 import axios from "axios";
 import { dbPort } from "../private.js";
 
@@ -56,7 +56,7 @@ const Signup = () => {
   return (
     <>
       <div className="Signup">
-        <Auth_Form
+        <AuthForm
           labels={{ label, setLabel }}
           formDetails={{ label: "Signup" }}
           stateFunc={{ username, setUsername, password, setPassword }}
@@ -84,7 +84,7 @@ const Login = () => {
   return (
     <>
       <div className="Login">
-        <Auth_Form
+        <AuthForm
           labels={{ label, setLabel }}
           formDetails={{ label: "Login" }}
           stateFunc={{ username, setUsername, password, setPassword }}

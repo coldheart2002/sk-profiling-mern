@@ -1,26 +1,9 @@
-import { useEffect, useState } from "react";
 import Display from "../components/Display";
-import axios from "axios";
 import { dbPort } from "../private.js";
+import { useFetchProfiles } from "../useFetchProfiles.js";
 
 const Profiles = () => {
-  const [profiles, setProfiles] = useState([]);
-  const [loading, setLoading] = useState(true);
-  const [message, setMessage] = useState("Loading...");
-
-  useEffect(() => {
-    axios
-      .get(`http://localhost:${dbPort}/profiles`)
-      .then((result) => {
-        result.data.result == 0 ? setLoading(true) : setLoading(false);
-        setMessage(result.data.message);
-        setProfiles(result.data.result);
-      })
-      .catch((err) => {
-        setLoading(true);
-        setMessage(`${err.message}!`);
-      });
-  }, []);
+  const { loading, message, profiles } = useFetchProfiles(dbPort);
 
   return (
     <div className="container-fluid">
@@ -33,4 +16,4 @@ const Profiles = () => {
   );
 };
 
-export default { Profiles, profiles };
+export default Profiles;

@@ -1,6 +1,6 @@
 import PropTypes from "prop-types";
 
-const Auth_Form = ({ labels, formDetails, stateFunc, handleSubmit }) => {
+const AuthForm = ({ labels, formDetails, stateFunc, handleSubmit }) => {
   return (
     <div className="container-fluid border border-primary rounded">
       <form className="p-4" onSubmit={handleSubmit}>
@@ -42,15 +42,15 @@ const Auth_Form = ({ labels, formDetails, stateFunc, handleSubmit }) => {
   );
 };
 
-Auth_Form.propTypes = {
+AuthForm.propTypes = {
   formDetails: PropTypes.object.isRequired,
   stateFunc: PropTypes.object.isRequired,
   handleSubmit: PropTypes.func.isRequired,
   labels: PropTypes.object.isRequired,
 };
 
-Auth_Form.defaultProps = {
+AuthForm.defaultProps = {
   formDetails: { label: "Default" },
 };
 
-export default Auth_Form;
+export default AuthForm;
