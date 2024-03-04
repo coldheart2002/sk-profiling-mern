@@ -6,19 +6,29 @@ import { dbPort } from "../private.js";
 const Profiles = () => {
   const [profiles, setProfiles] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [message, setMessage] = useState("Loading...");
 
   useEffect(() => {
     axios
       .get(`http://localhost:${dbPort}/profiles`)
       .then((result) => {
-        setLoading(false);
-        setProfiles(result.data);
+        result.data.result == 0 ? setLoading(true) : setLoading(false);
+        setMessage(result.data.message);
+        setProfiles(result.data.result);
       })
-      .catch((err) => console.err(err));
+      .catch((err) => {
+        setLoading(true);
+        setMessage(`${err.message}!`);
+      });
   }, []);
+
   return (
     <div className="container-fluid">
-      {loading ? <p>Loading...</p> : <Display profiles={profiles} />}
+      {loading ? (
+        <p className="text-center text-capitalize">{message}</p>
+      ) : (
+        <Display profiles={profiles} />
+      )}
     </div>
   );
 };

@@ -50,7 +50,8 @@ const Signup = () => {
     e.preventDefault();
     axios
       .post(`http://localhost:${dbPort}/auth/signup`, { username, password })
-      .then((res) => setLabel(res.data.message));
+      .then((res) => setLabel(res.data.message))
+      .catch((err) => setLabel(err.message));
   };
   return (
     <>

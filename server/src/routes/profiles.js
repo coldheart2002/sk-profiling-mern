@@ -6,10 +6,10 @@ router.get("/", (req, res) => {
   Profile.find()
     .sort({ createdAt: -1 })
     .then((result) => {
-      if (result.length == []) {
-        res.json(result);
+      if (result.length === 0) {
+        return res.json({ message: "no data available", result });
       }
-      res.json(result);
+      res.json({ message: "data fetched successfully", result });
     })
     .catch((err) => res.json(err));
 });
