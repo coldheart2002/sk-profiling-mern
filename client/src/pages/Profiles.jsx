@@ -1,17 +1,17 @@
 import Display from "../components/Display";
 import { dbPort } from "../private.js";
-import { useFetchProfiles } from "../useFetchProfiles.js";
+import { useFetchData } from "../useFetchData.js";
 
 const Profiles = () => {
   const link = `http://localhost:${dbPort}/profiles`;
-  const { loading, message, profiles } = useFetchProfiles(link);
+  const { loading, message, data } = useFetchData(link);
 
   return (
     <div className="container-fluid">
       {loading ? (
         <p className="text-center text-capitalize">{message}</p>
       ) : (
-        <Display profiles={profiles} />
+        <Display profiles={data} />
       )}
     </div>
   );

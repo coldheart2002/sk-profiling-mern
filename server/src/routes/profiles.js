@@ -63,7 +63,12 @@ router.get("/chartData", (req, res) => {
       );
       const votersData = [notVoters, skVoters, nationalVoters];
 
-      res.json({ civilStatusData, sexData, educationData, votersData });
+      const result = { civilStatusData, sexData, educationData, votersData };
+
+      res.json({
+        message: "chart data fetched successfully",
+        result,
+      });
     })
     .catch((err) => res.json(err));
 });

@@ -10,9 +10,9 @@ const app = express();
 mongoose
   .connect(dbURI)
   .then(() => {
-    console.log("connected to database...");
+    console.log("Connected to Database...");
     app.listen(port, () => {
-      console.log(`server started at localhost:${port}...`);
+      console.log(`Server: http://localhost:${port}`);
     });
   })
   .catch((err) => {
