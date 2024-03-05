@@ -23,8 +23,8 @@ app.use(cors());
 app.use(express.json());
 
 //routes
-app.use("/auth", auth);
-app.use("/profiles", profiles);
+app.use("/api/auth", auth);
+app.use("/api/profiles", profiles);
 
 app.use((req, res) => {
   res.json({ message: "page not found!" });

@@ -84,6 +84,13 @@ router.post("/create", (req, res) => {
     .catch((err) => res.json(err));
 });
 
+router.get("/read/:id", (req, res) => {
+  const id = req.params.id;
+  Profile.findById(id)
+    .then((result) => res.json(result))
+    .catch((err) => res.json(err));
+});
+
 router.post("/update/:id", (req, res) => {
   const { id } = req.params;
 
@@ -107,13 +114,6 @@ router.delete("/delete/:id", (req, res) => {
 router.get("/search", (req, res) => {
   const id = req.query.name;
   Profile.find({ lName: id })
-    .then((result) => res.json(result))
-    .catch((err) => res.json(err));
-});
-
-router.get("/:id", (req, res) => {
-  const id = req.params.id;
-  Profile.findById(id)
     .then((result) => res.json(result))
     .catch((err) => res.json(err));
 });

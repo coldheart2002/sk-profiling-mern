@@ -1,7 +1,7 @@
 import { useState } from "react";
 import AuthForm from "../components/AuthForm.jsx";
 import axios from "axios";
-import { dbPort } from "../private.js";
+import { signupLink, loginLink } from "../private.js";
 
 const Auth = () => {
   const [signupVisibility, setSignupVisibility] = useState(true);
@@ -49,7 +49,7 @@ const Signup = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     axios
-      .post(`http://localhost:${dbPort}/auth/signup`, { username, password })
+      .post(signupLink, { username, password })
       .then((res) => setLabel(res.data.message))
       .catch((err) => setLabel(err.message));
   };
@@ -74,12 +74,10 @@ const Login = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    axios
-      .post(`http://localhost:${dbPort}/auth/login`, { username, password })
-      .then((res) => {
-        setLabel(res.data.message);
-        window.localStorage.setItem("token", res.data.token);
-      });
+    axios.post(loginLink, { username, password }).then((res) => {
+      setLabel(res.data.message);
+      window.localStorage.setItem("id", res.data.userId);
+    });
   };
   return (
     <>

@@ -4,6 +4,7 @@ import Profiles from "./pages/Profiles";
 import Auth from "./pages/Auth";
 import Navbar from "./components/Navbar";
 import Dashboard from "./pages/Dashboard";
+import Create from "./pages/Create";
 
 const App = () => {
   return (
@@ -14,6 +15,7 @@ const App = () => {
           <Route path="/" element={<Home />} />
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/profiles" element={<Profiles />} />
+          <Route path="/create" element={<Create />} />
           <Route path="/auth" element={<Auth />} />
         </Routes>
       </Router>

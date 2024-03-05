@@ -1,10 +1,9 @@
 import Display from "../components/Display";
-import { dbPort } from "../private.js";
+import { allProfilesLink } from "../private.js";
 import { useFetchData } from "../useFetchData.js";
 
 const Profiles = () => {
-  const link = `http://localhost:${dbPort}/profiles`;
-  const { loading, message, data } = useFetchData(link);
+  const { loading, message, data } = useFetchData(allProfilesLink);
 
   return (
     <div className="container-fluid">

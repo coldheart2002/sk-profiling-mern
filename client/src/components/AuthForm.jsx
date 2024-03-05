@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 const AuthForm = ({ labels, formDetails, stateFunc, handleSubmit }) => {
   return (
     <div className="container-fluid border border-primary rounded">
-      <form className="p-4" onSubmit={handleSubmit}>
+      <form className="p-4 g-3" onSubmit={handleSubmit}>
         <div className="text-label text-capitalize">{labels.label}</div>
         <h2 className="text-center">{formDetails.label}</h2>
         <div className="mb-3">

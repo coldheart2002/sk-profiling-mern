@@ -31,6 +31,9 @@ const Navbar = () => {
               <Link className="nav-link" to="/profiles">
                 Profiles
               </Link>
+              <Link className="nav-link" to="/create">
+                Create
+              </Link>
               <Link className="nav-link" to="/auth">
                 Auth
               </Link>

@@ -1,10 +1,9 @@
 import PieCharts from "../components/charts/PieCharts";
-import { dbPort } from "../private";
+import { chartDataLink } from "../private";
 import { useFetchData } from "../useFetchData";
 
 const Dashboard = () => {
-  const link = `http://localhost:${dbPort}/profiles/chartData`;
-  const { loading, message, data } = useFetchData(link);
+  const { loading, message, data } = useFetchData(chartDataLink);
 
   return (
     <div className="container-fluid">
