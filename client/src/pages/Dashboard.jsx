@@ -1,3 +1,4 @@
+import WithLoading from "../components/WithLoading";
 import PieCharts from "../components/charts/PieCharts";
 import { chartDataLink } from "../private";
 import { useFetchData } from "../useFetchData";
@@ -7,11 +8,9 @@ const Dashboard = () => {
 
   return (
     <div className="container-fluid">
-      {loading ? (
-        <p className="text-center text-capitalize">{message}</p>
-      ) : (
+      <WithLoading loading={loading} message={message}>
         <PieCharts chartData={data} />
-      )}
+      </WithLoading>
     </div>
   );
 };

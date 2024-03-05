@@ -1,4 +1,5 @@
 import Display from "../components/Display";
+import WithLoading from "../components/WithLoading";
 import { profilesLink } from "../private.js";
 import { useFetchData } from "../useFetchData.js";
 
@@ -7,11 +8,9 @@ const Profiles = () => {
 
   return (
     <div className="container-fluid">
-      {loading ? (
-        <p className="text-center text-capitalize">{message}</p>
-      ) : (
+      <WithLoading loading={loading} message={message} data={data}>
         <Display profiles={data} />
-      )}
+      </WithLoading>
     </div>
   );
 };

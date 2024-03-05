@@ -21,6 +21,8 @@ router.get("/chartData", (req, res) => {
 
   Profile.find()
     .then((profiles) => {
+      const dataLength = profiles.length;
+
       const singleCount = filterDataLength(profiles, "civilStatus", "s");
       const marriedCount = filterDataLength(profiles, "civilStatus", "m");
       const civilStatusData = [singleCount, marriedCount];
@@ -63,7 +65,13 @@ router.get("/chartData", (req, res) => {
       );
       const votersData = [notVoters, skVoters, nationalVoters];
 
-      const result = { civilStatusData, sexData, educationData, votersData };
+      const result = {
+        dataLength,
+        civilStatusData,
+        sexData,
+        educationData,
+        votersData,
+      };
 
       res.json({
         message: "chart data fetched successfully",

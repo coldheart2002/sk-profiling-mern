@@ -29,6 +29,7 @@ const AuthForm = ({ labels, formDetails, stateFunc, handleSubmit }) => {
               stateFunc.setPassword(e.target.value);
               labels.setLabel("");
             }}
+            autoComplete="on"
             type="password"
             className="form-control"
             id="password"
