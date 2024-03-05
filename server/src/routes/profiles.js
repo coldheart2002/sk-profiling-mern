@@ -87,7 +87,9 @@ router.post("/create", (req, res) => {
 router.get("/read/:id", (req, res) => {
   const id = req.params.id;
   Profile.findById(id)
-    .then((result) => res.json(result))
+    .then((result) =>
+      res.json({ message: "data fetched successfully", result })
+    )
     .catch((err) => res.json(err));
 });
 

@@ -5,6 +5,7 @@ import Auth from "./pages/Auth";
 import Navbar from "./components/Navbar";
 import Dashboard from "./pages/Dashboard";
 import Create from "./pages/Create";
+import OneProfile from "./components/OneProfile";
 
 const App = () => {
   return (
@@ -15,6 +16,7 @@ const App = () => {
           <Route path="/" element={<Home />} />
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/profiles" element={<Profiles />} />
+          <Route path="/profiles/read/:id" element={<OneProfile />} />
           <Route path="/create" element={<Create />} />
           <Route path="/auth" element={<Auth />} />
         </Routes>

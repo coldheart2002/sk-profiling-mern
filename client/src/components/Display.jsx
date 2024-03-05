@@ -1,6 +1,7 @@
 import { PropTypes } from "prop-types";
+import { Link } from "react-router-dom";
 
-const Profiles = ({ profiles }) => {
+const Display = ({ profiles }) => {
   const colStyle = "fw-medium text-capitalize";
   return (
     <div className="container-fluid ">
@@ -35,9 +36,12 @@ const Profiles = ({ profiles }) => {
             return (
               <tr key={profile._id}>
                 <th scope="row">
-                  <p>
-                    <span>select</span>
-                  </p>
+                  <Link
+                    style={{ cursor: "pointer", textDecoration: "none" }}
+                    to={`/profiles/read/${profile._id}`}
+                  >
+                    select
+                  </Link>
                 </th>
                 <td>
                   <p>
@@ -92,8 +96,8 @@ const Profiles = ({ profiles }) => {
   );
 };
 
-Profiles.propTypes = {
+Display.propTypes = {
   profiles: PropTypes.arrayOf(PropTypes.object),
 };
 
-export default Profiles;
+export default Display;

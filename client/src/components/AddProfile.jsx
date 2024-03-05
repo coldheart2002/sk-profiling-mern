@@ -1,22 +1,21 @@
 import { useState } from "react";
 import DropdownForm from "./formTemplate/DropdownForm";
 import InputForm from "./formTemplate/InputForm";
-import PropTypes from "prop-types";
 import axios from "axios";
 import { createLink } from "../private";
 
 const AddProfile = () => {
-  const [firstName, setFirstName] = useState("");
-  const [middleName, setMiddleName] = useState("");
-  const [lastName, setLastName] = useState("");
-  const [username, setUsername] = useState("");
-  const [age, setAge] = useState(0);
-  const [birthDate, setBirthDate] = useState("");
-  const [contactNumber, setContactNumber] = useState(0);
-  const [civilStatus, setCivilStatus] = useState(0);
-  const [sex, setSex] = useState(0);
-  const [education, setEducation] = useState(0);
-  const [voter, setVoter] = useState(0);
+  const [firstName, setFirstName] = useState();
+  const [middleName, setMiddleName] = useState();
+  const [lastName, setLastName] = useState();
+  const [username, setUsername] = useState();
+  const [age, setAge] = useState();
+  const [birthDate, setBirthDate] = useState();
+  const [contactNumber, setContactNumber] = useState();
+  const [civilStatus, setCivilStatus] = useState();
+  const [sex, setSex] = useState();
+  const [education, setEducation] = useState();
+  const [voter, setVoter] = useState();
 
   const profile = {
     fName: firstName,
@@ -164,10 +163,6 @@ const AddProfile = () => {
       </form>
     </div>
   );
-};
-
-AddProfile.propTypes = {
-  handleSubmit: PropTypes.func.isRequired,
 };
 
 export default AddProfile;
