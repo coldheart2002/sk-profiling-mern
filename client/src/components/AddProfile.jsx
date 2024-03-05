@@ -37,7 +37,7 @@ const AddProfile = () => {
     axios
       .post(createLink, profile)
       .then((result) => {
-        console.log(result);
+        alert(result.data.message);
         navigate("/profiles");
       })
       .catch((err) => console.log(err));
