@@ -73,7 +73,7 @@ router.get("/chartData", (req, res) => {
     .catch((err) => res.json(err));
 });
 
-router.post("/create", (req, res) => {
+router.post("/new", (req, res) => {
   const profile = new Profile(req.body);
 
   profile
@@ -84,7 +84,7 @@ router.post("/create", (req, res) => {
     .catch((err) => res.json(err));
 });
 
-router.get("/read/:id", (req, res) => {
+router.get("/:id", (req, res) => {
   const id = req.params.id;
   Profile.findById(id)
     .then((result) =>
@@ -93,7 +93,7 @@ router.get("/read/:id", (req, res) => {
     .catch((err) => res.json(err));
 });
 
-router.post("/update/:id", (req, res) => {
+router.post("/:id", (req, res) => {
   const { id } = req.params;
 
   Profile.findOneAndUpdate({ _id: id }, req.body, { new: true })
@@ -103,7 +103,7 @@ router.post("/update/:id", (req, res) => {
     .catch((err) => res.json(err));
 });
 
-router.delete("/delete/:id", (req, res) => {
+router.delete("/:id", (req, res) => {
   const { id } = req.params;
 
   Profile.findByIdAndDelete(id)

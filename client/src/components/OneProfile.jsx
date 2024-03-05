@@ -1,12 +1,11 @@
 import { useParams } from "react-router-dom";
 import { useFetchData } from "../useFetchData";
-import { readLink } from "../private";
+import { profilesLink } from "../private";
 import ProfileInfo from "./ProfileInfo";
 
 const OneProfile = () => {
   const { id } = useParams();
-  const { loading, message, data } = useFetchData(`${readLink}/${id}`);
-  console.log(`${readLink}/${id}`);
+  const { loading, message, data } = useFetchData(`${profilesLink}/${id}`);
   return (
     <div className="container-fluid">
       {loading ? (

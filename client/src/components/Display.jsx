@@ -38,7 +38,7 @@ const Display = ({ profiles }) => {
                 <th scope="row">
                   <Link
                     style={{ cursor: "pointer", textDecoration: "none" }}
-                    to={`/profiles/read/${profile._id}`}
+                    to={`/profiles/${profile._id}`}
                   >
                     select
                   </Link>

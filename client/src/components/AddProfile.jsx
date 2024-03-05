@@ -3,19 +3,21 @@ import DropdownForm from "./formTemplate/DropdownForm";
 import InputForm from "./formTemplate/InputForm";
 import axios from "axios";
 import { createLink } from "../private";
+import { useNavigate } from "react-router-dom";
 
 const AddProfile = () => {
-  const [firstName, setFirstName] = useState();
-  const [middleName, setMiddleName] = useState();
-  const [lastName, setLastName] = useState();
-  const [username, setUsername] = useState();
-  const [age, setAge] = useState();
-  const [birthDate, setBirthDate] = useState();
-  const [contactNumber, setContactNumber] = useState();
-  const [civilStatus, setCivilStatus] = useState();
-  const [sex, setSex] = useState();
-  const [education, setEducation] = useState();
-  const [voter, setVoter] = useState();
+  const [firstName, setFirstName] = useState("");
+  const [middleName, setMiddleName] = useState("");
+  const [lastName, setLastName] = useState("");
+  const [username, setUsername] = useState("");
+  const [age, setAge] = useState(0);
+  const [birthDate, setBirthDate] = useState("");
+  const [contactNumber, setContactNumber] = useState(0);
+  const [civilStatus, setCivilStatus] = useState("");
+  const [sex, setSex] = useState("");
+  const [education, setEducation] = useState("");
+  const [voter, setVoter] = useState("");
+  const navigate = useNavigate("");
 
   const profile = {
     fName: firstName,
@@ -34,7 +36,10 @@ const AddProfile = () => {
     e.preventDefault();
     axios
       .post(createLink, profile)
-      .then((result) => console.log(result))
+      .then((result) => {
+        console.log(result);
+        navigate("/profiles");
+      })
       .catch((err) => console.log(err));
   };
 
@@ -46,7 +51,7 @@ const AddProfile = () => {
             <InputForm
               label="First name"
               type="text"
-              value="firstName"
+              id="firstName"
               setter={setFirstName}
               getter={firstName}
             />
@@ -55,7 +60,7 @@ const AddProfile = () => {
             <InputForm
               label="Middle name"
               type="text"
-              value="middleName"
+              id="middleName"
               setter={setMiddleName}
               getter={middleName}
             />
@@ -64,7 +69,7 @@ const AddProfile = () => {
             <InputForm
               label="Last name"
               type="text"
-              value="lastName"
+              id="lastName"
               setter={setLastName}
               getter={lastName}
             />
@@ -75,7 +80,7 @@ const AddProfile = () => {
             <InputForm
               label="Username"
               type="text"
-              value="username"
+              id="username"
               setter={setUsername}
               getter={username}
             />
@@ -84,7 +89,7 @@ const AddProfile = () => {
             <InputForm
               label="Age"
               type="number"
-              value="age"
+              id="age"
               setter={setAge}
               getter={age}
             />
@@ -93,7 +98,7 @@ const AddProfile = () => {
             <InputForm
               label="Birth date"
               type="date"
-              value="birthDate"
+              id="birthDate"
               setter={setBirthDate}
               getter={birthDate}
             />
@@ -120,7 +125,7 @@ const AddProfile = () => {
             <InputForm
               label="Contact number"
               type="number"
-              value="contactNumber"
+              id="contactNumber"
               setter={setContactNumber}
               getter={contactNumber}
             />
@@ -148,7 +153,6 @@ const AddProfile = () => {
             <input
               className="form-check-input"
               type="checkbox"
-              value=""
               id="invalidCheck2"
               required
             />

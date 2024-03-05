@@ -1,9 +1,9 @@
 import Display from "../components/Display";
-import { allProfilesLink } from "../private.js";
+import { profilesLink } from "../private.js";
 import { useFetchData } from "../useFetchData.js";
 
 const Profiles = () => {
-  const { loading, message, data } = useFetchData(allProfilesLink);
+  const { loading, message, data } = useFetchData(profilesLink);
 
   return (
     <div className="container-fluid">

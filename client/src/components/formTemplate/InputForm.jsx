@@ -1,15 +1,15 @@
 import PropTypes from "prop-types";
 
-const InputForm = ({ getter, setter, label, type, value }) => {
+const InputForm = ({ getter, setter, label, type, id }) => {
   return (
     <>
-      <label htmlFor={value} className="form-label">
+      <label htmlFor={id} className="form-label">
         {label}
       </label>
       <input
         type={type}
         className="form-control"
-        id={value}
+        id={id}
         required
         value={getter}
         onChange={(e) => setter(e.target.value)}
@@ -19,14 +19,14 @@ const InputForm = ({ getter, setter, label, type, value }) => {
 };
 
 InputForm.propTypes = {
-  getter: PropTypes.func,
   setter: PropTypes.func,
-  value: PropTypes.string.isRequired,
+  getter: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
+  id: PropTypes.string.isRequired,
   label: PropTypes.string.isRequired,
   type: PropTypes.string.isRequired,
 };
 InputForm.defaultProps = {
-  value: "default",
+  id: "",
   label: "default",
   type: "",
 };

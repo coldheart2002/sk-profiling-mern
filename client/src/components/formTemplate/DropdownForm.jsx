@@ -17,7 +17,7 @@ const DropdownForm = ({ getter, setter, id, values }) => {
           Choose
         </option>
         {values.map((value) => (
-          <option key={value} value={value.charAt(0)}>
+          <option key={value} value={value}>
             {value.charAt(0).toUpperCase() + value.slice(1)}
           </option>
         ))}
@@ -27,8 +27,8 @@ const DropdownForm = ({ getter, setter, id, values }) => {
 };
 
 DropdownForm.propTypes = {
-  getter: PropTypes.func,
   setter: PropTypes.func,
+  getter: PropTypes.string.isRequired,
   id: PropTypes.string.isRequired,
   values: PropTypes.arrayOf(PropTypes.string.isRequired),
 };
