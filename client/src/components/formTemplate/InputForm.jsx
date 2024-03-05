@@ -1,35 +1,34 @@
-import { useState } from "react";
 import PropTypes from "prop-types";
 
-const InputForm = ({ label, value }) => {
-  const [data, setData] = useState("");
-  const handleChange = (e) => {
-    setData(e.target.value);
-  };
+const InputForm = ({ getter, setter, label, type, value }) => {
   return (
     <>
       <label htmlFor={value} className="form-label">
         {label}
       </label>
       <input
-        type="text"
+        type={type}
         className="form-control"
         id={value}
         required
-        value={data}
-        onChange={handleChange}
+        value={getter}
+        onChange={(e) => setter(e.target.value)}
       />
     </>
   );
 };
 
 InputForm.propTypes = {
+  getter: PropTypes.func,
+  setter: PropTypes.func,
   value: PropTypes.string.isRequired,
   label: PropTypes.string.isRequired,
+  type: PropTypes.string.isRequired,
 };
 InputForm.defaultProps = {
   value: "default",
   label: "default",
+  type: "",
 };
 
 export default InputForm;
