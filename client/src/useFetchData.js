@@ -11,7 +11,7 @@ export const useFetchData = (link) => {
       .get(link)
       .then((response) => {
         response.data.result == 0 ? setLoading(true) : setLoading(false);
-        setMessage(response.data.message);
+        setMessage(response.data.result);
         setData(response.data.result);
       })
       .catch((err) => {

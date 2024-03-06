@@ -1,6 +1,6 @@
 const dbPort = 3000;
-// const myIP = "192.168.37.10";
-const myIP = "192.168.1.13";
+const myIP = "192.168.37.10";
+// const myIP = "192.168.1.13";
 
 const authLink = `http://${myIP}:${dbPort}/api/auth`;
 export const signupLink = `${authLink}/signup`;
