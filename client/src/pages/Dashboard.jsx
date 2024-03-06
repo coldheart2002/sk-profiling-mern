@@ -8,7 +8,7 @@ const Dashboard = () => {
 
   return (
     <div
-      className="container d-flex align-items-center justify-content-center"
+      className="pt-5 container d-flex align-items-center justify-content-center border"
       style={{ height: "100%" }}
     >
       <WithLoading loading={loading} message={message}>

@@ -17,7 +17,10 @@ const App = () => {
         >
           <Navbar />
         </div>
-        <div className="content border" style={{ height: "90vh" }}>
+        <div
+          className="content border"
+          style={{ height: "90vh", overflowY: "auto" }}
+        >
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/dashboard" element={<Dashboard />} />
