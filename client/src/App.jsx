@@ -11,15 +11,22 @@ const App = () => {
   return (
     <div className="App">
       <Router>
-        <Navbar />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/dashboard" element={<Dashboard />} />
-          <Route path="/profiles" element={<Profiles />} />
-          <Route path="/profiles/:id" element={<OneProfile />} />
-          <Route path="/create" element={<Create />} />
-          <Route path="/auth" element={<Auth />} />
-        </Routes>
+        <div
+          className="navbar "
+          style={{ height: "10vh", backgroundColor: "#e3f2fd" }}
+        >
+          <Navbar />
+        </div>
+        <div className="content border" style={{ height: "90vh" }}>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/dashboard" element={<Dashboard />} />
+            <Route path="/profiles" element={<Profiles />} />
+            <Route path="/profiles/:id" element={<OneProfile />} />
+            <Route path="/create" element={<Create />} />
+            <Route path="/auth" element={<Auth />} />
+          </Routes>
+        </div>
       </Router>
     </div>
   );

@@ -1,47 +1,75 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
 
 const Navbar = () => {
+  const [searchInput, setSearchInput] = useState("");
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setSearchInput("");
+    console.log(searchInput);
+    //fetch db
+  };
   return (
-    <div className="Navbar">
-      <nav className="navbar navbar-expand-lg bg-body-tertiary">
-        <div className="container-fluid">
-          <Link className="navbar-brand" aria-current="page" to="/">
-            SK Profiling
-          </Link>
-
+    <>
+      <nav className="p-3 container-fluid navbar navbar-expand-lg ">
+        <>
           <button
             className="navbar-toggler"
             type="button"
             data-bs-toggle="collapse"
-            data-bs-target="#navbarNavAltMarkup"
-            aria-controls="navbarNavAltMarkup"
+            data-bs-target="#navbarTogglerDemo03"
+            aria-controls="navbarTogglerDemo03"
             aria-expanded="false"
             aria-label="Toggle navigation"
           >
             <span className="navbar-toggler-icon"></span>
           </button>
-          <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
-            <div className="navbar-nav">
-              <Link className="nav-link active" aria-current="page" to="/">
-                Home
-              </Link>
-              <Link className="nav-link" to="/dashboard">
-                Dashboard
-              </Link>
-              <Link className="nav-link" to="/profiles">
-                Profiles
-              </Link>
-              <Link className="nav-link" to="/create">
-                Create
-              </Link>
-              <Link className="nav-link" to="/auth">
-                Auth
-              </Link>
-            </div>
+          <Link className="navbar-brand" aria-current="page" to="/">
+            SK Profiling
+          </Link>
+          <div className="collapse navbar-collapse" id="navbarTogglerDemo03">
+            <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+              <li className="nav-item">
+                <Link className="nav-link active" aria-current="page" to="/">
+                  Home
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link className="nav-link" to="/dashboard">
+                  Dashboard
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link className="nav-link" to="/profiles">
+                  Profiles
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link className="nav-link" to="/create">
+                  Create
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link className="nav-link" to="/auth">
+                  Auth
+                </Link>
+              </li>
+            </ul>
+            <form className="d-flex" role="search" onSubmit={handleSubmit}>
+              <input
+                className="form-control me-2"
+                type="search"
+                placeholder="Search"
+                aria-label="Search"
+                value={searchInput}
+                onChange={(e) => setSearchInput(e.target.value)}
+              />
+              <button className="btn btn-outline-success">Search</button>
+            </form>
           </div>
-        </div>
+        </>
       </nav>
-    </div>
+    </>
   );
 };
 

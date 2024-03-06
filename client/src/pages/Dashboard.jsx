@@ -9,15 +9,11 @@ const Dashboard = () => {
   return (
     <div
       className="container d-flex align-items-center justify-content-center"
-      style={{ height: "100vh" }}
+      style={{ height: "100%" }}
     >
-      {message === "Network Error!" ? (
-        <p className="text-center text-capitalize">{message}</p>
-      ) : (
-        <WithLoading loading={loading}>
-          <PieCharts chartData={data} />
-        </WithLoading>
-      )}
+      <WithLoading loading={loading} message={message}>
+        <PieCharts chartData={data} />
+      </WithLoading>
     </div>
   );
 };

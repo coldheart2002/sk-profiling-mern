@@ -2,11 +2,10 @@ import { PropTypes } from "prop-types";
 
 const WithLoading = ({ loading, message, children }) => {
   return (
-    <div
-      className="container d-flex align-items-center justify-content-center"
-      style={{ height: "100vh" }}
-    >
-      {loading ? (
+    <div className="container d-flex align-items-center justify-content-center">
+      {message === "Network Error!" ? (
+        <p className="text-center text-capitalize">{message}</p>
+      ) : loading ? (
         <>
           <LoadingAnimation />
         </>
@@ -23,6 +22,7 @@ WithLoading.propTypes = {
   children: PropTypes.node.isRequired,
 };
 
+//css in index.html
 const LoadingAnimation = () => {
   return (
     <div className="wrapper">
