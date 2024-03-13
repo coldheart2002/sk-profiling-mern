@@ -2,19 +2,21 @@ import PropTypes from "prop-types";
 
 const InputForm = ({ getter, setter, label, type, id }) => {
   return (
-    <>
-      <label htmlFor={id} className="form-label">
-        {label}
-      </label>
+    <div className="form-floating mb-3">
       <input
         type={type}
         className="form-control"
         id={id}
         required
         value={getter}
+        placeholder={label}
         onChange={(e) => setter(e.target.value)}
       />
-    </>
+      <label htmlFor={id} className="form-label">
+        {label}
+      </label>
+      <div className="invalid-feedback">Please input a {label}</div>
+    </div>
   );
 };
 

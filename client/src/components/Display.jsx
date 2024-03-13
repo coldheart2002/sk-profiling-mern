@@ -40,7 +40,7 @@ const Display = ({ profiles }) => {
                     style={{ cursor: "pointer", textDecoration: "none" }}
                     to={`/profiles/${profile._id}`}
                   >
-                    select
+                    <button className="btn  btn-outline-primary">Select</button>
                   </Link>
                 </th>
                 <td>

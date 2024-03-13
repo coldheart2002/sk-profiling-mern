@@ -1,16 +1,12 @@
 import WithLoading from "../components/WithLoading";
 import PieCharts from "../components/charts/PieCharts";
-import { chartDataLink } from "../private";
+import { chartDataLink } from "../setup";
 import { useFetchData } from "../useFetchData";
 
 const Dashboard = () => {
   const { loading, message, data } = useFetchData(chartDataLink);
-
   return (
-    <div
-      className="pt-5 container d-flex align-items-center justify-content-center border"
-      style={{ height: "100%" }}
-    >
+    <div className=" container" style={{ height: "100%" }}>
       <WithLoading loading={loading} message={message}>
         <PieCharts chartData={data} />
       </WithLoading>

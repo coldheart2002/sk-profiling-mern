@@ -27,7 +27,7 @@ router.post("/signup", async (req, res) => {
     res.json({ message: "user saved" });
   } catch (err) {
     console.log(err);
-    res.json(err);
+    res.json({ message: "validation failed", err });
   }
 });
 

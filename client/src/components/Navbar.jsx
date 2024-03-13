@@ -11,23 +11,22 @@ const Navbar = () => {
   };
   return (
     <>
-      <nav className="p-3 container-fluid navbar navbar-expand-lg ">
+      <nav className="p-3 container-fluid navbar navbar-expand-md">
         <>
           <button
             className="navbar-toggler"
             type="button"
             data-bs-toggle="collapse"
-            data-bs-target="#navbarTogglerDemo03"
-            aria-controls="navbarTogglerDemo03"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
+            data-bs-target="#nav"
+            aria-controls="nav"
+            aria-label="Expand Navigation"
           >
             <span className="navbar-toggler-icon"></span>
           </button>
           <Link className="navbar-brand" aria-current="page" to="/">
             SK Profiling
           </Link>
-          <div className="collapse navbar-collapse" id="navbarTogglerDemo03">
+          <div className="collapse navbar-collapse" id="nav">
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
               <li className="nav-item">
                 <Link className="nav-link active" aria-current="page" to="/">

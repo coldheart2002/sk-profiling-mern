@@ -9,7 +9,7 @@ router.get("/", (req, res) => {
       if (result.length === 0) {
         return res.json({ message: "no data available", result });
       }
-      res.json({ message: "data fetched successfully", result });
+      res.json({ message: "all profiles fetched successfully", result });
     })
     .catch((err) => res.json(err));
 });
@@ -89,14 +89,14 @@ router.post("/new", (req, res) => {
     .then(() => {
       res.json({ message: "data saved successfully" });
     })
-    .catch((err) => res.json(err));
+    .catch((err) => res.json({ message: "all fields are required", err }));
 });
 
 router.get("/:id", (req, res) => {
-  const id = req.params.id;
+  const { id } = req.params;
   Profile.findById(id)
     .then((result) =>
-      res.json({ message: "data fetched successfully", result })
+      res.json({ message: "profile fetched successfully", result })
     )
     .catch((err) => res.json(err));
 });
@@ -106,7 +106,7 @@ router.post("/:id", (req, res) => {
 
   Profile.findOneAndUpdate({ _id: id }, req.body, { new: true })
     .then(() => {
-      res.json({ message: "data updated successfully" });
+      res.json({ message: "profile updated successfully" });
     })
     .catch((err) => res.json(err));
 });
@@ -116,7 +116,7 @@ router.delete("/:id", (req, res) => {
 
   Profile.findByIdAndDelete(id)
     .then(() => {
-      res.json({ message: "data deleted successfully" });
+      res.json({ message: "profile deleted successfully" });
     })
     .catch((err) => res.json(err));
 });

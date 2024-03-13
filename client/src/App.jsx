@@ -11,12 +11,7 @@ const App = () => {
   return (
     <div className="App">
       <Router>
-        <div
-          className="navbar "
-          style={{ height: "10vh", backgroundColor: "#e3f2fd" }}
-        >
-          <Navbar />
-        </div>
+        <Navbar />
         <div
           className="content border"
           style={{ height: "90vh", overflowY: "auto" }}

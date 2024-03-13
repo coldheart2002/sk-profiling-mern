@@ -2,6 +2,7 @@ import PieChartTemplate from "./PieChartTemplate";
 import PropTypes from "prop-types";
 
 const PieCharts = ({ chartData }) => {
+  console.log(chartData);
   const rowStyle = "row ";
   const colStyle =
     "p-5 m-1 rounded border border-primary col d-flex justify-content-center";

@@ -3,7 +3,7 @@ import mongoose from "mongoose";
 import cors from "cors";
 import { auth } from "./routes/auth.js";
 import { profiles } from "./routes/profiles.js";
-import { port, dbURI } from "./private.js";
+import { port, dbURI } from "./setup.js";
 
 const app = express();
 
