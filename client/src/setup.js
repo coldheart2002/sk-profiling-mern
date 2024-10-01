@@ -1,5 +1,5 @@
-const myIP = "192.168.37.10";
-// const myIP = "192.168.1.17";
+// const myIP = "192.168.37.10";
+const myIP = "192.168.1.46";
 
 export const clientPort = 3001;
 const serverPort = 3000;

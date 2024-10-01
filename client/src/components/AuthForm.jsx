@@ -33,52 +33,19 @@ const AuthForm = ({
       />
       <button className="btn btn-outline-primary">Submit</button>
     </form>
-
-    // <form onSubmit={handleSubmit}>
-    //   <div className="text-label text-capitalize">{labels.label}</div>
-    //   <h2 className="text-center">{formDetails.label}</h2>
-    //   <div className="mb-3">
-    //     <label htmlFor="username" className="form-label">
-    //       Username
-    //     </label>
-    //     <input
-    //       onChange={(e) => {
-    //         stateFunc.setUsername(e.target.value);
-    //         labels.setLabel("");
-    //       }}
-    //       type="text"
-    //       className="form-control"
-    //       id="username"
-    //     />
-    //   </div>
-    //   <div className="mb-3">
-    //     <label htmlFor="password" className="form-label">
-    //       Password
-    //     </label>
-    //     <input
-    //       onChange={(e) => {
-    //         stateFunc.setPassword(e.target.value);
-    //         labels.setLabel("");
-    //       }}
-    //       autoComplete="on"
-    //       type="password"
-    //       className="form-control"
-    //       id="password"
-    //     />
-    //   </div>
-    //   <button type="submit" className="btn btn-outline-primary">
-    //     {formDetails.label}
-    //   </button>
-    // </form>
   );
 };
 
-// AuthForm.propTypes = {
-//   formDetails: PropTypes.object.isRequired,
-//   stateFunc: PropTypes.object.isRequired,
-//   handleSubmit: PropTypes.func.isRequired,
-//   labels: PropTypes.object.isRequired,
-// };
+AuthForm.propTypes = {
+  header: PropTypes.string,
+  username: PropTypes.string,
+  setUsername: PropTypes.func,
+  password: PropTypes.string,
+  setPassword: PropTypes.func,
+  label: PropTypes.string,
+  setLabel: PropTypes.func,
+  handleSubmit: PropTypes.func,
+};
 
 AuthForm.defaultProps = {
   formDetails: { label: "Default" },

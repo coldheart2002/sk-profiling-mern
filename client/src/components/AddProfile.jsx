@@ -40,8 +40,8 @@ const AddProfile = () => {
       .post(createLink, profile)
       .then((result) => {
         console.log(result);
-        // alert(result.data.message);
-        // navigate("/profiles");
+        alert(result.data.message);
+        navigate("/profiles");
       })
       .catch((err) => console.log(err));
   };

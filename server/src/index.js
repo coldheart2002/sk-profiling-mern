@@ -1,5 +1,6 @@
 import express from "express";
 import mongoose from "mongoose";
+import mongodb from "mongodb";
 import cors from "cors";
 import { auth } from "./routes/auth.js";
 import { profiles } from "./routes/profiles.js";

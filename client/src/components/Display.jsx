@@ -1,14 +1,12 @@
 import { PropTypes } from "prop-types";
 import { Link } from "react-router-dom";
+import DataCount from "./DataCount";
 
 const Display = ({ profiles }) => {
   const colStyle = "fw-medium text-capitalize";
   return (
     <div className="container-fluid ">
-      <label
-        htmlFor="dataLength"
-        className="text-capitalize mb-3"
-      >{`${profiles.length} data available`}</label>
+      <DataCount dataCount={profiles.length} />
       <table className="table table-striped text-center">
         <thead>
           <tr className="table-primary fs-5">

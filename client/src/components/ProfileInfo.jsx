@@ -1,11 +1,13 @@
 import { useNavigate } from "react-router-dom";
 import { PropTypes } from "prop-types";
+import { profilesLink } from "../setup";
+import axios from "axios";
 
 const ProfileInfo = ({ profile }) => {
   const navigate = useNavigate();
   const fullName = `${profile.fName} ${profile.lName}`;
   return (
-    <div>
+    <>
       <button
         className="btn btn-outline-primary"
         onClick={() => navigate("/profiles")}
@@ -13,7 +15,20 @@ const ProfileInfo = ({ profile }) => {
         Back
       </button>
       <h2 style={{ textTransform: "capitalize" }}>{fullName}</h2>
-    </div>
+      <button
+        className="btn btn-outline-primary"
+        onClick={() => {
+          let endpoint = `${profilesLink}/${profile._id}`;
+
+          axios.delete(endpoint).then((res) => {
+            alert(res.data.message);
+            navigate("/profiles");
+          });
+        }}
+      >
+        Delete
+      </button>
+    </>
   );
 };
 

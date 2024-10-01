@@ -6,7 +6,6 @@ import ProfileInfo from "./ProfileInfo";
 const OneProfile = () => {
   const { id } = useParams();
   const { loading, message, data } = useFetchData(`${profilesLink}/${id}`);
-  console.log(`${profilesLink}/${id}`);
   return (
     <div className="container-fluid">
       {loading ? (

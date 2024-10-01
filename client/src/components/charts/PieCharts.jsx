@@ -1,16 +1,16 @@
+import DataCount from "../DataCount";
 import PieChartTemplate from "./PieChartTemplate";
 import PropTypes from "prop-types";
 
 const PieCharts = ({ chartData }) => {
-  console.log(chartData);
   const rowStyle = "row ";
   const colStyle =
     "p-5 m-1 rounded border border-primary col d-flex justify-content-center";
 
   return (
     <div className="container-fluid ">
-      <div className="row">
-        <label htmlFor="dataLength">{`${chartData.dataLength} data available`}</label>
+      <div className="row ">
+        <DataCount dataCount={chartData.dataLength} />
       </div>
       <div className={rowStyle}>
         <div className={colStyle}>
